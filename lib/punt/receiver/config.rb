@@ -1,7 +1,12 @@
 module Punt
   module Receiver
     class Config
-      def initialize(token_file, repos_file)
+      def initialize(config_file,env=ENV)
+        @env = env
+      end
+
+      def github_token
+        @env.fetch("GITHUB_TOKEN")
       end
     end
   end
