@@ -3,7 +3,7 @@ require 'yaml'
 module Punt
   module Receiver
     class Config
-      def initialize(config_file,env=ENV,yaml=YAML)
+      def initialize(env=ENV,yaml=YAML)
         @env = env
         @yaml = yaml
       end

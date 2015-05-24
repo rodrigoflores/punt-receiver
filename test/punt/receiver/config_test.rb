@@ -6,7 +6,7 @@ describe Punt::Receiver::Config do
   before do
     @mock_env = MiniTest::Mock.new
     @mock_yaml = MiniTest::Mock.new
-    @config = Punt::Receiver::Config.new("a",@mock_env,@mock_yaml)
+    @config = Punt::Receiver::Config.new(@mock_env,@mock_yaml)
   end
 
   it "gets the github token data" do
