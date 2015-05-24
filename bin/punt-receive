@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require 'punt/receive'
+require 'punt/receiver'
 
 config = Punt::Receive::Config.new
 Punt::Receive::Retriever.new(config).retrieve_pull_requests
