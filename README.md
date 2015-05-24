@@ -36,4 +36,6 @@ $ punt-receive
 
 ## To-do ##
 
-- [ ] Create a set-up mode that checks for the env vars and creates a bare `PR_REPOS_FILE`
+- [ ] Create a set-up mode that checks for the env vars and creates a bare `PR_REPOS_FILE`;
+- [ ] Align all PR fields;
+- [ ] Be able to set what info will appear on the output;
