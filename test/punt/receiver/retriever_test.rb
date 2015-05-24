@@ -26,7 +26,7 @@ describe "it gathers all the repos" do
       buffer = StringIO.new
       @retriever.retrieve_pull_requests(buffer)
 
-      buffer.string.must_equal "A nice pr - johndoe - 2010-01-01T00:00:00 UTC - https://github.com/a-nice-pr/url\n"
+      buffer.string.must_equal "A nice pr\tjohndoe\t2010-01-01T00:00:00 UTC\thttps://github.com/a-nice-pr/url\n"
       
       assert @config.verify
       assert @octokit.verify

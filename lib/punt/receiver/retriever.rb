@@ -12,7 +12,7 @@ module Punt
         @config.relevant_repos.each do |repo|
           prs = @client.pull_requests(repo)
           prs.each do |pr|
-            output.puts "#{pr[:title]} - #{pr[:user][:login]} - #{pr[:created_at]} - #{pr[:url]}"
+            output.puts "#{pr[:title]}\t#{pr[:user][:login]}\t#{pr[:created_at]}\t#{pr[:url]}"
           end
         end
       end
