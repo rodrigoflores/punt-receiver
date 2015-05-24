@@ -1,6 +1,6 @@
-require "minitest/autorun"
-require 'minitest/mock'
 require "punt/receiver/config" 
+require 'minitest/autorun'
+require 'minitest/pride'
 
 describe Punt::Receiver::Config do
   before do

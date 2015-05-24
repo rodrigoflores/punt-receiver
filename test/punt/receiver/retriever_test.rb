@@ -1,6 +1,6 @@
 require 'punt/receiver/retriever'
-require "minitest/autorun"
-require 'minitest/mock'
+require 'minitest/autorun'
+require 'minitest/pride'
 
 describe "it gathers all the repos" do
   before do
