@@ -1,16 +1,18 @@
+require 'octokit'
+
 module Punt
   module Receiver
     class Retriever
-      def initialize(config)
+      def initialize(config,octokit_client=Octokit::Client)
         @config = config
-        @client = Octokit::Client.new(:access_token => @config.github_token)
+        @client = octokit_client.new(:access_token => @config.github_token)
       end
 
-      def retrieve_pull_requests
+      def retrieve_pull_requests(output=$stdout)
         @config.relevant_repos.each do |repo|
           prs = @client.pull_requests(repo)
           prs.each do |pr|
-            puts "#{pr[:title]} - #{pr[:user][:login]} - #{pr[:created_at]} - #{pr[:url]}"
+            output.puts "#{pr[:title]} - #{pr[:user][:login]} - #{pr[:created_at]} - #{pr[:url]}"
           end
         end
       end
