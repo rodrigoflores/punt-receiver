@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 require 'punt/receive'
 
 config = Punt::Receive::Config.new
