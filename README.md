@@ -2,7 +2,7 @@
 
 Given a set of repos and a Github token, shows all the PRs.
 
-![https://travis-ci.org/rodrigoflores/punt-receiver.svg]()
+![](https://travis-ci.org/rodrigoflores/punt-receiver.svg)
 
 ## Set up and usage
 
