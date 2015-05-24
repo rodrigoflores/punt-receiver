@@ -1,0 +1,4 @@
+require 'punt/receive'
+
+config = Punt::Receive::Config.new
+Punt::Receive::Retriever.new(config).retrieve_pull_requests

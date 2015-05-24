@@ -20,7 +20,7 @@ describe "it gathers all the repos" do
       @octokit_client.expect(:pull_requests, [{title: "A nice pr",
                                                user: {login: "johndoe"},
                                                created_at: "2010-01-01T00:00:00 UTC",
-                                               url: "https://github.com/a-nice-pr/url"}], ["rails/rails"])
+                                               html_url: "https://github.com/a-nice-pr/url"}], ["rails/rails"])
 
 
       buffer = StringIO.new
