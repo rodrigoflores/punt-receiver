@@ -1,31 +1,37 @@
 # Punt::Receiver
 
-TODO: Write a gem description
+Given a set of repos and a Github token, shows all the PRs.
 
-## Installation
+## Set up and usage
 
-Add this line to your application's Gemfile:
+Install the gem:
 
-```ruby
-gem 'punt-receiver'
+```
+gem install punt-receiver
 ```
 
-And then execute:
+Save your github OAuth token (with repo scope) on a env var named `GITHUB_TOKEN` and the full path of the config file on the env var `PR_REPOS_FILE`.
 
-    $ bundle
+```
+export GITHUB_TOKEN=a-token
+export PR_REPOS_FILE=/users/flores/.pr.yaml
+```
 
-Or install it yourself as:
+On the `PR_REPOS_FILE` you should put a yaml content like this:
 
-    $ gem install punt-receiver
+```yaml
+---
+repos:
+- rails/rails
+- rspec/rspec
+```
 
-## Usage
+And then you'll be able to see all open PR's through the command
 
-TODO: Write usage instructions here
+```
+$ punt-receive
+```
 
-## Contributing
+## To-do ##
 
-1. Fork it ( https://github.com/[my-github-username]/punt-receiver/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+- [ ] Create a set-up mode that checks for the env vars and creates a bare `PR_REPOS_FILE`
